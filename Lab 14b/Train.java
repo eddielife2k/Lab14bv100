@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.awt.*;
 import java.applet.*;
@@ -14,24 +15,31 @@ public class Train
     public void addCar(String name, Color c){
         int xC = t.size();
         if(name.equals("Locomotive")){
-            RailCar loc = new Locomotive(c, xC, y);
-            t.add(loc);
-            
+           t.add(new Locomotive(c, xC, y));
         }
-        else if(name.equals("Passengercar")){
-            RailCar pas = new PassengerCar(c, xC, y);
-            t.add(pas);
-            
+        if(name.equals("Passengercar")){
+           t.add(new PassengerCar(c, xC, y));
         }
-        else if(name.equals("FreightCar")){
-            RailCar frt = new FreightCar(c, xC, y);
-            t.add(frt);
-            
+        if(name.equals("FreightCar")){
+           t.add(new FreightCar(c, xC, y));
         }
-        else if(name.equals("Caboose")){
-            RailCar cab = new Caboose(c, xC, y);
-            t.add(cab);
-            
+        if(name.equals("Caboose")){
+           t.add(new Caboose(c, xC, y));
+        }
+    }
+    public void addCar(int index, String name, Color c){
+        int xC = t.size();
+        if(name.equals("Locomotive")){
+           t.add(index, new Locomotive(c, xC, y));
+        }
+        if(name.equals("Passengercar")){
+           t.add(index, new PassengerCar(c, xC, y));
+        }
+        if(name.equals("FreightCar")){
+           t.add(index, new FreightCar(c, xC, y));
+        }
+        if(name.equals("Caboose")){
+           t.add(index, new Caboose(c, xC, y));
         }
     }
 }
