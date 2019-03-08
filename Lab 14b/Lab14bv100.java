@@ -17,11 +17,10 @@ public class Lab14bv100 extends Applet
       train.addCar("PassengerCar",Color.gray);
       train.addCar("PassengerCar",Color.gray);
       train.addCar("FreightCar",Color.green);
-      train.addCar(3,"PassengerCar",Color.gray);
+      train.addCar("PassengerCar",Color.gray);
       train.addCar("FreightCar",Color.green);
       train.addCar("Caboose",Color.red);
-      train.addCar(6,"FreightCar",Color.green);
+      train.addCar("FreightCar",Color.green);
       train.showCars(g);
 	}
 }
-
